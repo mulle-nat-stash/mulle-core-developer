@@ -1,0 +1,12 @@
+{
+	"folders":
+	[
+		{
+			"file_exclude_patterns":
+			[
+				"src/extensions/._.DS_Store"
+			],
+			"path": "."
+		}
+	]
+}

@@ -12,11 +12,11 @@ digraph G {
 
     "CMakeLists.txt"                    [ shape="note", color="#16a085", fontcolor="#16a085" ]
 
-    "CMakeHeadersAndSources.txt"        [ shape="note", color="#16a085", fontcolor="#16a085" ]
-    "CMakeDependenciesAndLibraries.txt" [ shape="note", color="#16a085", fontcolor="#16a085" ]
+    "CMakeHeadersAndSources.cmake"        [ shape="note", color="#16a085", fontcolor="#16a085" ]
+    "CMakeDependenciesAndLibraries.cmake" [ shape="note", color="#16a085", fontcolor="#16a085" ]
 
-    "CMakeLists.txt" -> "CMakeHeadersAndSources.txt"         [ style="dotted", label="include (2)" ]
-    "CMakeLists.txt" -> "CMakeDependenciesAndLibraries.txt"  [ style="dotted", label="include (3)" ]
+    "CMakeLists.txt" -> "CMakeHeadersAndSources.cmake"         [ style="dotted", label="include (2)" ]
+    "CMakeLists.txt" -> "CMakeDependenciesAndLibraries.cmake"  [ style="dotted", label="include (3)" ]
 
 
     { rank = same;  "PreFiles.cmake", "PostFiles.cmake", "PreExecutable.cmake", "PostExecutable.cmake" };

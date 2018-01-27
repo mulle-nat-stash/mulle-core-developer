@@ -1,8 +1,7 @@
 #
 # Set Search Paths
 #
-
-include( CMakeTweaks)
+include( "${MULLE_CMAKE_INCLUDE_DIR}/CMakeTweaks.cmake")
 
 ### mulle-sde environment
 
@@ -35,8 +34,3 @@ if( CMAKE_BUILD_STYLE STREQUAL "Debug")
       ${CMAKE_FRAMEWORK_PATH}
    )
 endif()
-
-###
-
-
-

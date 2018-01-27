@@ -1,6 +1,6 @@
 # 🧢 Enhanced cmake files for mulle-sde C development
 
-This is a **buildtool** extension for [mulle-sde](/mulle-sde/mulle-sde). It supplements the **mulle-sde** builtin cmake files, with some usefule functionality for C development.
+This is a **buildtool** extension for [mulle-sde](/mulle-sde/mulle-sde). It supplements the **mulle-sde** builtin cmake files, with some useful functionality for C development.
 
 ![](dox/mulle-sde-c-developer.png)
 

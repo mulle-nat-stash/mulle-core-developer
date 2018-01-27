@@ -171,9 +171,10 @@ main()
    share="${prefix}/share/mulle-sde/mulle"
 
    EXTENSION_DIR="${share}/extensions"
+   mkdir -p "${EXTENSION_DIR}" || exit 1
+
    for i in src/extensions/*
    do
-      mkdir -p "${EXTENSION_DIR}" 2> /dev/null
       cp -Rav "${i}" "${EXTENSION_DIR}/" || exit 1
    done
 }

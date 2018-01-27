@@ -1,6 +1,6 @@
 cmake_minimum_required( VERSION 3.0)
 
-project( <|PROJECT_NAME|> <|PROJECT_LANGUAGE|>)
+project( <|PROJECT_NAME|> <|PROJECT_UPCASE_LANGUAGE|>)
 
 
 ### Files
@@ -9,34 +9,35 @@ if( NOT MULLE_CMAKE_INCLUDE_DIR)
    set( MULLE_CMAKE_INCLUDE_DIR "${PROJECT_SOURCE_DIR}/.mulle-sde/share/cmake")
 endif()
 
-if( EXISTS "${MULLE_CMAKE_INCLUDE_DIR}/<|PROJECT_LANGUAGE|>/PreFiles")
-   include( "${MULLE_CMAKE_INCLUDE_DIR}/<|PROJECT_LANGUAGE|>/PreFiles")
+if( EXISTS "${MULLE_CMAKE_INCLUDE_DIR}/PreFiles.cmake")
+   include( "${MULLE_CMAKE_INCLUDE_DIR}/PreFiles.cmake")
+else()
+   message( WARNING ".mulle-sde/share is not set up yet. Some functionality may be missing")
 endif()
-
 
 set( <|PROJECT_UPCASE_IDENTIFIER|>_LIBRARY ON)
 
-include( CMakeDependenciesAndLibraries.txt)
-include( CMakeHeadersAndSources.txt)
+include( CMakeHeadersAndSources.cmake)
+include( CMakeDependenciesAndLibraries.cmake)
 
 
 include_directories( ${INCLUDE_DIRS})
 
 set( PUBLIC_HEADERS
 ${PUBLIC_HEADERS}
-"CMakeDependenciesAndLibraries.txt"
-"_CMakeDependencies.txt"
-"_CMakeLibraries.txt"
+"CMakeDependenciesAndLibraries.cmake"
+"_CMakeDependencies.cmake"
+"_CMakeLibraries.cmake"
 )
 
-if( EXISTS "${MULLE_CMAKE_INCLUDE_DIR}/<|PROJECT_LANGUAGE|>/PostFiles")
-   include( "${MULLE_CMAKE_INCLUDE_DIR}/<|PROJECT_LANGUAGE|>}/PostFiles")
+if( EXISTS "${MULLE_CMAKE_INCLUDE_DIR}/PostFiles.cmake")
+   include( "${MULLE_CMAKE_INCLUDE_DIR}/PostFiles.cmake")
 endif()
 
 ### Library
 
-if( EXISTS "${MULLE_CMAKE_INCLUDE_DIR}/<|PROJECT_LANGUAGE|>}/PreLibrary")
-   include( "${MULLE_CMAKE_INCLUDE_DIR}/<|PROJECT_LANGUAGE|>/PreLibrary")
+if( EXISTS "${MULLE_CMAKE_INCLUDE_DIR}/PreLibrary.cmake")
+   include( "${MULLE_CMAKE_INCLUDE_DIR}/PreLibrary.cmake")
 endif()
 
 add_library( "<|PROJECT_NAME|>"
@@ -44,7 +45,7 @@ ${SOURCES}
 ${PUBLIC_HEADERS}
 ${PRIVATE_HEADERS}
 CMakeLists.txt
-CMakeHeadersAndSources.txt
+CMakeHeadersAndSources.cmake
 )
 
 if( BUILD_SHARED_LIBS)
@@ -55,8 +56,8 @@ ${OS_SPECIFIC_LIBRARIES}
 endif()
 
 
-if( EXISTS "${MULLE_CMAKE_INCLUDE_DIR}/<|PROJECT_LANGUAGE|>/PostLibrary")
-   include( "${MULLE_CMAKE_INCLUDE_DIR}/<|PROJECT_LANGUAGE|>/PostLibrary")
+if( EXISTS "${MULLE_CMAKE_INCLUDE_DIR}/PostLibrary.cmake")
+   include( "${MULLE_CMAKE_INCLUDE_DIR}/PostLibrary.cmake")
 endif()
 
 ### Install
