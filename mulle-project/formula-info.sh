@@ -2,7 +2,7 @@
 # If you don't have this file, there will be no homebrew
 # formula operations.
 #
-PROJECT="mulle-sde-c-developer"      # your project/repository name
+PROJECT="mulle-c-developer"      # your project/repository name
 DESC="🧢 Enhanced cmake files for mulle-sde C development"
 
 # LANGUAGE="c"             # c,cpp, objc, bash ...
@@ -16,6 +16,6 @@ DESC="🧢 Enhanced cmake files for mulle-sde C development"
 # DEPENDENCIES and BUILD_DEPENDENCIES will be evaled later!
 # So keep them single quoted.
 #
-DEPENDENCIES='${DEPENDENCY_TAP}mulle-sde
-cmake
+DEPENDENCIES='${DEPENDENCY_TAP}mulle-sde-cmake
+${DEPENDENCY_TAP}mulle-sde-c
 '

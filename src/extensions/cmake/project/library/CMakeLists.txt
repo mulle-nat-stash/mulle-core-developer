@@ -12,7 +12,7 @@ endif()
 if( EXISTS "${MULLE_CMAKE_INCLUDE_DIR}/PreFiles.cmake")
    include( "${MULLE_CMAKE_INCLUDE_DIR}/PreFiles.cmake")
 else()
-   message( WARNING ".mulle-sde/share is not set up yet. Some functionality may be missing")
+   message( ERROR "${MULLE_CMAKE_INCLUDE_DIR} is not properly set up yet.")
 endif()
 
 set( <|PROJECT_UPCASE_IDENTIFIER|>_LIBRARY ON)
@@ -30,15 +30,11 @@ ${PUBLIC_HEADERS}
 "_CMakeLibraries.cmake"
 )
 
-if( EXISTS "${MULLE_CMAKE_INCLUDE_DIR}/PostFiles.cmake")
-   include( "${MULLE_CMAKE_INCLUDE_DIR}/PostFiles.cmake")
-endif()
+include( "${MULLE_CMAKE_INCLUDE_DIR}/PostFiles.cmake")
 
 ### Library
 
-if( EXISTS "${MULLE_CMAKE_INCLUDE_DIR}/PreLibrary.cmake")
-   include( "${MULLE_CMAKE_INCLUDE_DIR}/PreLibrary.cmake")
-endif()
+include( "${MULLE_CMAKE_INCLUDE_DIR}/PreLibrary.cmake")
 
 add_library( "<|PROJECT_NAME|>"
 ${SOURCES}
@@ -50,15 +46,12 @@ CMakeHeadersAndSources.cmake
 
 if( BUILD_SHARED_LIBS)
    target_link_libraries( <|PROJECT_NAME|>
-${C_DEPENDENCIES_LIBRARIES}
-${OS_SPECIFIC_LIBRARIES}
+${LIBRARIES}
 )
 endif()
 
 
-if( EXISTS "${MULLE_CMAKE_INCLUDE_DIR}/PostLibrary.cmake")
-   include( "${MULLE_CMAKE_INCLUDE_DIR}/PostLibrary.cmake")
-endif()
+include( "${MULLE_CMAKE_INCLUDE_DIR}/PostLibrary.cmake")
 
 ### Install
 

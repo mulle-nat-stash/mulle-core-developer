@@ -1,5 +1,5 @@
 
-PIX=mulle-sde-c-developer.png
+PIX=mulle-c-developer.png
 
 %.png: %.dot
 	dot -Tpng -o $*.png $<

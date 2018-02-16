@@ -1,0 +1,5 @@
+mulle-thread;git;;2adb3692-2a7a-4e92-a0a6-ba694d50c3e8;https://github.com/mulle-c/mulle-thread.git;;;;
+mulle-container;git;no-header;1dff744f-3b78-4042-8b10-7ae9eb0c9e1e;https://github.com/mulle-c/mulle-container.git;;;;
+mulle-allocator;git;no-darwin,no-freebsd;1556aa3a-374b-4252-b12a-1636747f0a21;https://github.com/mulle-c/mulle-allocator.git;;;;
+mulle-concurrent;git;only-darwin;e0f2ef82-d682-4f32-b00b-525e8bbaf34c;https://github.com/mulle-c/mulle-concurrent.git;;;;
+mulle-aba;git;;f7fce709-bd03-4cd0-9103-39acdca2d476;https://github.com/mulle-c/mulle-aba.git;;;;include=foo/foo.h

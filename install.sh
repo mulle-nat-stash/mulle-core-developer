@@ -168,7 +168,16 @@ main()
 
    cd "`dirname -- "$0"`"
 
+   bin="${prefix}/bin"
    share="${prefix}/share/mulle-sde/mulle"
+
+   if [ ! -d "${bin}" ]
+   then
+      mkdir -p "${bin}" || fail "could not create ${bin}"
+   fi
+
+   install -m "${mode}" "mulle-c-sourcetree-update" "${bin}/mulle-c-sourcetree-update" || exit 1
+   printf "install: ${C_MAGENTA}${C_BOLD}%s${C_RESET}\n" "${bin}/mulle-c-sourcetree-update" >&2
 
    EXTENSION_DIR="${share}/extensions"
    mkdir -p "${EXTENSION_DIR}" || exit 1
