@@ -1,0 +1,7 @@
+# need this
+mulle-sde:cmake-c;meta
+
+# now add our stuff
+mulle-c:cmake;buildtool
+mulle-c:c;runtime
+

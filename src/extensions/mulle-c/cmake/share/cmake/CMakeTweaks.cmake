@@ -1,4 +1,3 @@
-
 cmake_policy( SET CMP0054 NEW)
 
 # makes nicer Xcode projects, I see no detriment
