@@ -5,16 +5,16 @@ project( mulle-c-developer NONE)
 set( PROJECT_VERSION 0.4.0)
 
 set( EXTENSIONS
-src/extensions
+src/  # backslash is important
 )
 
 
 INSTALL( DIRECTORY ${EXTENSIONS}
-DESTINATION "share/mulle-sde")
+DESTINATION "share/mulle-sde/extensions")
 
 
 ######
 #
 # must be after CPACK_PACKAGE_VERSION
-include( CMakePackage)
+include( CMakePackage.cmake)
 include( CPack)

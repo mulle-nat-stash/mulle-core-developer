@@ -6,6 +6,6 @@
 #
 VERSIONFILE="CMakeLists.txt"
 VERSIONNAME="PROJECT_VERSION"
-VERSIONFILEMIRRORS="src/extensions/mulle-c/c/etc/version/mulle-c/c
-src/extensions/mulle-c/cmake/etc/version/mulle-c/cmake
-src/extensions/mulle-c/cmake-c/etc/version/mulle-c/cmake-c"
+VERSIONFILEMIRRORS="src/mulle-c/c/etc/version/mulle-c/c
+src/mulle-c/cmake/etc/version/mulle-c/cmake
+src/mulle-c/cmake-c/etc/version/mulle-c/cmake-c"

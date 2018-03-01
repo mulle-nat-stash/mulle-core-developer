@@ -1,0 +1,11 @@
+--marks no-recurse,no-cmake-include,no-link 'https://github.com/mulle-c/mulle-c11/archive/release.tar.gz'
+# --marks no-cmake-include                    '\${MULLE_THREAD_URL:-${OPTION_URL_HOST:-https://github.com/mulle-c}/# mulle-thread/archive/\${MULLE_THREAD_BRANCH:-release}.tar.gz}'
+# --marks no-recurse,no-cmake-include         '\${MULLE_ALLOCATOR_URL:-${OPTION_URL_HOST:-https://github.com/mulle-c}/# mulle-allocator/archive/\${MULLE_ALLOCATOR_BRANCH:-release}.tar.gz}'
+# --marks no-recurse,no-cmake-include         '\${MULLE_ABA_URL:-${OPTION_URL_HOST:-https://github.com/mulle-c}/mulle-aba/# archive/\${MULLE_ABA_BRANCH:-release}.tar.gz}'
+# --marks no-recurse,no-cmake-include         '\${MULLE_CONCURRENT_URL:-${OPTION_URL_HOST:-https://github.com/mulle-c}/# mulle-concurrent/archive/\${MULLE_CONCURRENT_BRANCH:-release}.tar.gz}'
+# --marks no-recurse,no-cmake-include         '\${MULLE_BUFFER_URL:-${OPTION_URL_HOST:-https://github.com/mulle-c}/# mulle-buffer /archive/\${MULLE_BUFFER_BRANCH:-release}.tar.gz}'
+# --marks no-recurse,no-cmake-include         '\${MULLE_SPRINTF_URL:-${OPTION_URL_HOST:-https://github.com/mulle-c}/# mulle-sprintf/archive/\${MULLE_SPRINTF_BRANCH:-release}.tar.gz}'
+# --marks no-recurse,no-cmake-include         '\${MULLE_CONTAINER_URL:-${OPTION_URL_HOST:-https://github.com/mulle-c}/# mulle-container/archive/\${MULLE_CONTAINER_BRANCH:-release}.tar.gz}'
+# --marks no-recurse,no-cmake-include         '\${MULLE_UTF_URL:-${OPTION_URL_HOST:-https://github.com/mulle-c}/mulle-utf/# archive/\${MULLE_UTF_BRANCH:-release}.tar.gz}'
+# --marks no-recurse,no-cmake-include         '\${MULLE_VARARG_URL:-${OPTION_URL_HOST:-https://github.com/mulle-c}/# mulle-vararg/archive/\${MULLE_VARG11_BRANCH:-release}.tar.gz}'
+#
