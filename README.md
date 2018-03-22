@@ -57,7 +57,7 @@ If you don't want the `mulle-c` dependencies, but like the added
 functionality by mulle-c:cmake do:
 
 ```
-mulle-sde init -d hello-lib -m mulle-sde:cmake-c -b mulle-c:cmake library
+mulle-sde init -d hello-lib -m mulle-sde/cmake-c -b mulle-c:cmake library
 ```
 
 

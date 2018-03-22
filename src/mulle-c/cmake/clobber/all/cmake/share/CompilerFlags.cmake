@@ -1,3 +1,7 @@
+if( MULLE_TRACE_INCLUDE)
+   message( STATUS "# Include \"${CMAKE_CURRENT_LIST_FILE}\"" )
+endif()
+
 if( CMAKE_BUILD_STYLE STREQUAL "Debug")
    if( MULLE_C_COMPILER_ID MATCHES "^(Intel|MSVC|MSVC-Clang|MSVC-MulleClang)$")
       set( OTHER_C_FLAGS "${OTHER_C_FLAGS} /DDEBUG=1")
