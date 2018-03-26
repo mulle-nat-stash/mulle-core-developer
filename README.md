@@ -11,7 +11,7 @@ libraries as dependencies to your project.
 
 Executable                   | Description
 -----------------------------|--------------------------------
-`mulle-c-sourcetree-update`  | Update src/dependencies.h from mulle-sourcetree
+`c-sourcetree-update`        | Update src/_dependencies.h from mulle-sourcetree
 
 
 ## Install
@@ -44,20 +44,20 @@ mulle-c:cmake
 ### Create an executable mulle-c project
 
 ```
-mulle-sde init -d hello-exe -m mulle-c:cmake-c executable
+mulle-sde init -d hello-exe -m mulle-c/cmake-c executable
 ```
 
 ### Create a library mulle-c project
 
 ```
-mulle-sde init -d hello-lib -m mulle-c:cmake-c library
+mulle-sde init -d hello-lib -m mulle-c/cmake-c library
 ```
 
 If you don't want the `mulle-c` dependencies, but like the added
-functionality by mulle-c:cmake do:
+functionality by mulle-c/cmake do:
 
 ```
-mulle-sde init -d hello-lib -m mulle-sde/cmake-c -b mulle-c:cmake library
+mulle-sde init -d hello-lib -m mulle-sde/cmake-c -b mulle-c/cmake library
 ```
 
 
