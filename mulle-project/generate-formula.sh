@@ -1,25 +1,15 @@
 #
-# For documentation and help see:
-#    https://github.com/mulle-sde/mulle-project
+# Generate your `def install` `test do` lines here. echo them to stdout.
 #
-#
-
-generate_brew_formula_build
+generate_brew_formula_build()
 {
    local project="$1"
    local name="$2"
    local version="$3"
 
-   generate_script_brew_formula_build
-}
-
-
-generate_script_brew_formula_build()
-{
    cat <<EOF
 def install
-  system "./install.sh", "#{prefix}"
+  system "./installer", "#{prefix}"
 end
 EOF
 }
-
