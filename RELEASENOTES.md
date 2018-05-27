@@ -1,3 +1,7 @@
+### 0.4.8
+
+* remove space in dependency which was wrong
+
 ### 0.4.7
 
 * add dependency information
