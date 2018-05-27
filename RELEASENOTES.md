@@ -1,3 +1,7 @@
+### 0.4.7
+
+* add dependency information
+
 ### 0.4.6
 
 * fix filename rename
