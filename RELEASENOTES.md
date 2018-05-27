@@ -1,3 +1,7 @@
+### 0.4.9
+
+* no-recurse was not a good idea
+
 ### 0.4.8
 
 * remove space in dependency which was wrong
