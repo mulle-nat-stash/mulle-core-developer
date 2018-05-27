@@ -1,3 +1,7 @@
+### 0.4.4
+
+* add travis and fix dox
+
 ### 0.4.3
 
 * fix dependency

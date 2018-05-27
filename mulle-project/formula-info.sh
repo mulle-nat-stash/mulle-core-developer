@@ -3,7 +3,7 @@
 # formula operations.
 #
 PROJECT="mulle-c-developer"      # your project/repository name
-DESC="🧢 Enhanced cmake files for mulle-sde C development"
+DESC="🧢 mulle-sde extensions for mulle-c development"
 
 # LANGUAGE="c"             # c,cpp, objc, bash ...
 # NAME="${PROJECT}"        # formula filename without .rb extension
@@ -16,6 +16,12 @@ DESC="🧢 Enhanced cmake files for mulle-sde C development"
 # DEPENDENCIES and BUILD_DEPENDENCIES will be evaled later!
 # So keep them single quoted.
 #
-DEPENDENCIES='${DEPENDENCY_TAP}mulle-sde-cmake
-${DEPENDENCY_TAP}mulle-sde-c
+DEPENDENCIES='${DEPENDENCY_TAP}/mulle-sde
+cmake
+git
+'
+
+DEBIAN_DEPENDENCIES='mulle-sde-developer
+cmake( >= 3.0)
+git
 '
