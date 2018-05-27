@@ -1,3 +1,7 @@
+### 0.4.5
+
+* fix install problem, reduce dependencies
+
 ### 0.4.4
 
 * add travis and fix dox

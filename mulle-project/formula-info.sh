@@ -16,12 +16,6 @@ DESC="🧢 mulle-sde extensions for mulle-c development"
 # DEPENDENCIES and BUILD_DEPENDENCIES will be evaled later!
 # So keep them single quoted.
 #
-DEPENDENCIES='${DEPENDENCY_TAP}/mulle-sde
-cmake
-git
-'
+DEPENDENCIES='${DEPENDENCY_TAP}/mulle-sde-developer'
 
-DEBIAN_DEPENDENCIES='mulle-sde-developer
-cmake( >= 3.0)
-git
-'
+DEBIAN_DEPENDENCIES='mulle-sde-developer'

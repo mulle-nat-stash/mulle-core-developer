@@ -2,15 +2,16 @@ cmake_minimum_required( VERSION 3.0)
 
 project( mulle-c-developer NONE)
 
-set( PROJECT_VERSION 0.4.4)
+set( PROJECT_VERSION 0.4.5)
 
 set( EXTENSIONS
 src/  # backslash is important
 )
 
 
-INSTALL( DIRECTORY ${EXTENSIONS}
-DESTINATION "share/mulle-sde/extensions")
+install( DIRECTORY ${EXTENSIONS}
+DESTINATION "share/mulle-sde/extensions"
+USE_SOURCE_PERMISSIONS)
 
 
 ######
