@@ -1,3 +1,7 @@
+### 0.4.6
+
+* fix filename rename
+
 ### 0.4.5
 
 * fix install problem, reduce dependencies
