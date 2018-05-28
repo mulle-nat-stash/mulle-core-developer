@@ -1,3 +1,7 @@
+### 0.4.17
+
+* experimentally use osx
+
 ### 0.4.16
 
 * fix README

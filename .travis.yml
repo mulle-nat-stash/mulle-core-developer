@@ -1,22 +1,13 @@
 language: c
 
-dist: trusty
+# test mulle-sde-developer on linux and this on os x for variety
+
+os: osx
 sudo: required
 
-addons:
-  apt:
-    sources:
-      - sourceline: 'ppa:george-edison55/cmake-3.x'
-
-    packages:
-      - cmake
-      - cmake-data
-
 before_install:
-   - curl -sS "https://www.mulle-kybernetik.com/dists/debian-admin-pub.asc" | sudo apt-key add -
-   - echo "deb [arch=all] http://www.mulle-kybernetik.com `lsb_release -c -s` main" | sudo tee "/etc/apt/sources.list.d/mulle-kybernetik.com-main.list" > /dev/null
-   - sudo apt-get update
-   - sudo apt-get -y install mulle-c-developer
+   - brew update
+   - brew install mulle-kybernetik/software/mulle-c-developer
 
 script:
    - mulle-sde init -d exe -m mulle-c/c-developer executable
