@@ -1,3 +1,7 @@
+### 0.4.18
+
+* fixed Dockerfile
+
 ### 0.4.17
 
 * experimentally use osx

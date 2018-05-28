@@ -4,7 +4,6 @@ FROM ubuntu:trusty
 # add en UTF-8 as a locale
 RUN DEBIAN_FRONTEND=noninteractive \
    && apt-get update \
-   && apt-get -y dist-upgrade \
    && apt-get -y install locales \
    && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen && locale-gen \
    && apt-get -y install wget \
@@ -14,5 +13,6 @@ RUN DEBIAN_FRONTEND=noninteractive \
 \
    && echo "deb http://ppa.launchpad.net/george-edison55/cmake-3.x/ubuntu `lsb_release -c -s` main" | sudo tee "/etc/apt/sources.list.d/george-edison55-cmake-3_x-trusty.list" > /dev/null \
 \
-   && apt-get update
+   && sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 084ECFC5828AB726 \
+   && apt-get update \
    && apt-get -y install mulle-c-developer
