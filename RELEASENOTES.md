@@ -1,3 +1,7 @@
+### 0.4.16
+
+* fix README
+
 ### 0.4.15
 
 * restore inexplicably corrupted dependency file

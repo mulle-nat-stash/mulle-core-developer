@@ -2,7 +2,9 @@
 
 This is a [mulle-sde](/mulle-sde/mulle-sde) *meta extension*.
 It supplements **mulle-sde** with useful functionality for C development
-with mulle-c.
+using mulle-c libraries.
+
+It is also a convenient way to install mulle-sde.
 
 
 ## Install
@@ -37,26 +39,18 @@ supported package managers:
 ```
 curl -L -O 'https://raw.githubusercontent.com/mulle-sde/mulle-sde/release/installer-all' && \
 chmod 755 installer-all && \
-sudo SDE_PROJECTS="mulle-sde-developer;latest
-mulle-c-developer;latest" ./installer-all /usr
+sudo SDE_PROJECTS="mulle-c-developer;latest
+mulle-sde-developer;latest" ./installer-all /usr
 ```
 
-### Post Install
-
-
-After installation check with `mulle-sde extension list` that the extension
-is discoverable by **mulle-sde**
-
-```
-$ mulle-sde extension list | grep mulle-c
-Available meta extensions [-m <extension>]:
-...
-mulle-c/c-developer
-...
-```
 
 # Usage
 
+Check that the (meta) extensions are found:
+
+```
+mulle-sde extension list
+```
 
 ## Create an executable mulle-c project
 
