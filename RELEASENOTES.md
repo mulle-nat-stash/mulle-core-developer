@@ -1,3 +1,7 @@
+### 0.4.12
+
+* nicer README and fixed brew formula
+
 ### 0.4.11
 
 * fix brew formula

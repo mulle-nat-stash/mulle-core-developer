@@ -55,18 +55,16 @@ mulle-c/c-developer
 ...
 ```
 
+# Usage
 
 
-## Usage
-
-
-### Create an executable mulle-c project
+## Create an executable mulle-c project
 
 ```
 mulle-sde init -d hello-exe -m mulle-c/c-developer executable
 ```
 
-### Create a library mulle-c project
+## Create a library mulle-c project
 
 ```
 mulle-sde init -d hello-lib -m mulle-c/c-developer library
