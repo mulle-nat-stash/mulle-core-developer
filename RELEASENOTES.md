@@ -1,3 +1,7 @@
+### 0.4.15
+
+* restore inexplicably corrupted dependency file
+
 ### 0.4.14
 
 * fix installer one more time
