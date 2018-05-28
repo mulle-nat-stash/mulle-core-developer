@@ -1,3 +1,7 @@
+### 0.4.14
+
+* fix installer one more time
+
 ### 0.4.13
 
 * fix installer

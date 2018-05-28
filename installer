@@ -169,7 +169,7 @@ main()
    cd "`dirname -- "$0"`"
 
    bin="${prefix}/bin"
-   share="${prefix}/share/mulle-c"
+   share="${prefix}/share/mulle-sde"
 
    EXTENSION_DIR="${share}/extensions"
    mkdir -p "${EXTENSION_DIR}" || exit 1
