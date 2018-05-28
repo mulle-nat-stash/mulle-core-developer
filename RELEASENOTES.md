@@ -1,3 +1,7 @@
+### 0.4.10
+
+* fix dependency, update README.md
+
 ### 0.4.9
 
 * no-recurse was not a good idea
