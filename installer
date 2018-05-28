@@ -169,12 +169,12 @@ main()
    cd "`dirname -- "$0"`"
 
    bin="${prefix}/bin"
-   share="${prefix}/share/mulle-sde/mulle"
+   share="${prefix}/share/mulle-c"
 
    EXTENSION_DIR="${share}/extensions"
    mkdir -p "${EXTENSION_DIR}" || exit 1
 
-   for i in src/extensions/*
+   for i in src/mulle-c
    do
       cp -Rav "${i}" "${EXTENSION_DIR}/" || exit 1
    done

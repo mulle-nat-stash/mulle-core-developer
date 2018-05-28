@@ -1,3 +1,7 @@
+### 0.4.13
+
+* fix installer
+
 ### 0.4.12
 
 * nicer README and fixed brew formula
