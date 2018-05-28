@@ -16,6 +16,6 @@ DESC="🧢 mulle-sde extensions for mulle-c development"
 # DEPENDENCIES and BUILD_DEPENDENCIES will be evaled later!
 # So keep them single quoted.
 #
-DEPENDENCIES='${DEPENDENCY_TAP}/mulle-sde-developer'
+DEPENDENCIES='${MULLE_SDE_TAP}mulle-sde-developer'
 
 DEBIAN_DEPENDENCIES='mulle-sde-developer'

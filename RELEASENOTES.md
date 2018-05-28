@@ -1,3 +1,7 @@
+### 0.4.11
+
+* fix brew formula
+
 ### 0.4.10
 
 * fix dependency, update README.md
