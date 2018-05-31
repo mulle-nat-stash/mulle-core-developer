@@ -4,17 +4,18 @@ language: c
 
 os: osx
 sudo: required
+env:
 
 before_install:
    - brew update
-   - brew install mulle-kybernetik/software/mulle-c-developer
+   - brew install mulle-kybernetik/software/mulle-sde-developer
 
 script:
-   - mulle-sde init -d exe -m mulle-c/c-developer executable
+   - MULLE_SDE_EXTENSION_PATH="${PWD}/src:/usr/share/mulle-sde:/usr/local/share/mulle-sde" mulle-sde init -d exe -m mulle-c/c-developer executable
    - cd exe
    - mulle-sde -vvv craft
    - cd ..
-   - mulle-sde init -d lib -m mulle-c/c-developer library
+   - MULLE_SDE_EXTENSION_PATH="${PWD}/src:/usr/share/mulle-sde:/usr/local/share/mulle-sde" mulle-sde init -d lib -m mulle-c/c-developer library
    - cd exe
    - mulle-sde -vvv craft
    - cd ..
