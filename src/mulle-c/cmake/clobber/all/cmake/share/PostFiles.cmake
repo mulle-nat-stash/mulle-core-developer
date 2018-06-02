@@ -5,6 +5,7 @@ if( NOT __POST_FILES__CMAKE__)
       message( STATUS "# Include \"${CMAKE_CURRENT_LIST_FILE}\"" )
    endif()
 
+   include( AllLoad)
    include( PostFilesCAux.cmake OPTIONAL)
 
 endif()

@@ -39,22 +39,23 @@ include( PostFiles OPTIONAL)
 include( PreLibrary OPTIONAL)
 
 add_library( "<|PROJECT_NAME|>"
-# definitions from cmake/HeadersAndSources.cmake
-${SOURCES}
-${PUBLIC_HEADERS}
-${PRIVATE_HEADERS}
-# definitions from cmake/share/Environment.cmake
-${CMAKE_EDITABLE_FILES}
+   # definitions from cmake/HeadersAndSources.cmake
+   ${SOURCES}
+   ${PUBLIC_HEADERS}
+   ${PRIVATE_HEADERS}
+   # definitions from cmake/share/Environment.cmake
+   ${CMAKE_EDITABLE_FILES}
 )
-
 
 
 if( BUILD_SHARED_LIBS)
    target_link_libraries( <|PROJECT_NAME|>
 # definitions from cmake/share/DependenciesAndLibraries.cmake
-${DEPENDENCY_LIBRARIES}
-${OS_SPECIFIC_LIBRARIES}
-)
+      ${ALL_LOAD_DEPENDENCY_LIBRARIES}
+      ${DEPENDENCY_LIBRARIES}
+      ${OPTIONAL_DEPENDENCY_LIBRARIES}
+      ${OS_SPECIFIC_LIBRARIES}
+   )
 endif()
 
 include( PostLibrary OPTIONAL)
@@ -62,7 +63,7 @@ include( PostLibrary OPTIONAL)
 option( STANDALONE "Create standalone library for debugging" OFF)
 
 set( INSTALL_LIBRARY_TARGETS
-"<|PROJECT_NAME|>"
+   "<|PROJECT_NAME|>"
 )
 
 if( STANDALONE)
@@ -70,21 +71,22 @@ if( STANDALONE)
    set( STANDALONE_NAME "<|PROJECT_NAME|>-standalone")
    set( STANDALONE_DEFINITIONS ${<|PROJECT_UPCASE_IDENTIFIER|>_DEFINITIONS})
    set( STANDALONE_DEPENDENCIES
-   <|PROJECT_NAME|>
+      "<|PROJECT_NAME|>"
    )
 
    set( STANDALONE_ALL_LOAD_LIBRARIES
-   $<TARGET_FILE:<|PROJECT_NAME|>>
-   ${DEPENDENCY_LIBRARIES}
-   ${OPTIONAL_DEPENDENCY_LIBRARIES}
-   ${OS_SPECIFIC_LIBRARIES}
+      $<TARGET_FILE:<|PROJECT_NAME|>>
+      ${ALL_LOAD_DEPENDENCY_LIBRARIES}
+      ${DEPENDENCY_LIBRARIES}
+      ${OPTIONAL_DEPENDENCY_LIBRARIES}
+      ${OS_SPECIFIC_LIBRARIES}
    )
 
    include( Standalone)
 
    set( INSTALL_LIBRARY_TARGETS
-   ${INSTALL_LIBRARY_TARGETS}
-   "<|PROJECT_NAME|>-standalone"
+      ${INSTALL_LIBRARY_TARGETS}
+      "<|PROJECT_NAME|>-standalone"
    )
 endif()
 

@@ -1,3 +1,7 @@
+### 0.4.21
+
+* add executable CMakeLists.txt
+
 ### 0.4.20
 
 * improved travis file
