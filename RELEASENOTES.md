@@ -1,3 +1,9 @@
+## 0.5.0
+
+* renamed cmake files with suffix C for clarity
+* improved AllLoad with a helper function
+
+
 ### 0.4.21
 
 * add executable CMakeLists.txt

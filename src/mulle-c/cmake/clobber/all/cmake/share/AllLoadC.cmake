@@ -1,5 +1,5 @@
-if( NOT __ALL_LOAD__CMAKE__)
-   set( __ALL_LOAD__CMAKE__ ON)
+if( NOT __ALL_LOAD_C_CMAKE__)
+   set( __ALL_LOAD_C_CMAKE__ ON)
 
    if( MULLE_TRACE_INCLUDE)
       message( STATUS "# Include \"${CMAKE_CURRENT_LIST_FILE}\"" )
@@ -27,5 +27,14 @@ if( NOT __ALL_LOAD__CMAKE__)
          set( FORCE_LOAD_PREFIX)
       endif()
    endif()
+
+   function( CreateForceAllLoadList listname outputname)
+      set( list ${BEGIN_ALL_LOAD})
+      foreach( library ${${listname}})
+         list( APPEND list "${FORCE_LOAD_PREFIX}${library}")
+      endforeach()
+      list( APPEND list ${END_ALL_LOAD})
+      set( ${outputname} "${list}" PARENT_SCOPE)
+   endfunction()
 
 endif()
