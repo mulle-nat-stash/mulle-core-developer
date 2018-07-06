@@ -5,8 +5,11 @@ if( NOT __POST_LIBRARY__CMAKE__)
       message( STATUS "# Include \"${CMAKE_CURRENT_LIST_FILE}\"" )
    endif()
 
+   include( AllLoadC)
+   include( StartupC)
+   include( StandaloneC)
+
    include( LinkManifestC)
-   include( FinalOutputC)
 
    include( PostLibraryCAux OPTIONAL)
 

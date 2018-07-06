@@ -7,5 +7,5 @@
 VERSIONFILE="CMakeLists.txt"
 VERSIONNAME="PROJECT_VERSION"
 VERSIONFILEMIRRORS="src/mulle-c/c/version
-src/mulle-c/cmake/version
+src/mulle-c/c-cmake/version
 src/mulle-c/c-developer/version"

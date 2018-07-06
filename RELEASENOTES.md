@@ -1,3 +1,8 @@
+## 0.6.0
+
+* adapt to new mulle-sde-developer
+
+
 ## 0.5.0
 
 * renamed cmake files with suffix C for clarity

@@ -1,5 +1,5 @@
-if( NOT __STANDALONE__CMAKE__)
-   set( __STANDALONE__CMAKE__ ON)
+if( NOT __STANDALONE_C_CMAKE__)
+   set( __STANDALONE_C_CMAKE__ ON)
 
    if( MULLE_TRACE_INCLUDE)
       message( STATUS "# Include \"${CMAKE_CURRENT_LIST_FILE}\"" )
@@ -7,11 +7,15 @@ if( NOT __STANDALONE__CMAKE__)
 
    option( STANDALONE "Create standalone library for debugging" OFF)
 
+   # include before (!)
+
+   include( StandaloneCAux OPTIONAL)
+
    if( STANDALONE)
+
       if( NOT STANDALONE_NAME)
          set( STANDALONE_NAME "<|PROJECT_NAME|>-standalone")
       endif()
-
       set( STANDALONE_DEFINITIONS ${<|PROJECT_UPCASE_IDENTIFIER|>_DEFINITIONS})
 
       #
@@ -25,6 +29,19 @@ if( NOT __STANDALONE__CMAKE__)
          ${OPTIONAL_DEPENDENCY_LIBRARIES}
          ${OS_SPECIFIC_LIBRARIES}
       )
+
+      # STARTUP_LIBRARY is supposed to be a find_library definition
+      if( NOT STANDALONE_STARTUP_LIBRARY)
+         set( STANDALONE_STARTUP_LIBRARY ${STARTUP_LIBRARY})
+      endif()
+
+      if( STANDALONE_STARTUP_LIBRARY)
+         set( STANDALONE_ALL_LOAD_LIBRARIES
+            ${STANDALONE_ALL_LOAD_LIBRARIES}
+            ${STANDALONE_STARTUP_LIBRARY}
+         )
+      endif()
+
 
       #
       # If the main library is built as a shared library, we can't do it
@@ -104,11 +121,12 @@ and everybody will be happy")
             ${STANDALONE_SOURCES}
             ${DEF_FILE}
          )
+         set_property( TARGET ${STANDALONE_NAME} PROPERTY CXX_STANDARD 11)
 
-         add_dependencies( ${STANDALONE_NAME}
-            <|PROJECT_NAME|>
-            ${STANDALONE_STARTUP}
-         )
+         add_dependencies( ${STANDALONE_NAME} <|PROJECT_NAME|>)
+         if( STARTUP_NAME)
+            add_dependencies( ${STANDALONE_NAME} ${STARTUP_NAME})
+         endif()
 
          # If STANDALONE_SOURCES were to be empty, this would be needed
          # set_target_properties( ${STANDALONE_NAME} PROPERTIES LINKER_LANGUAGE "C")
@@ -122,11 +140,11 @@ and everybody will be happy")
          # are implicitly added.
          #
          # creates FORCE_STANDALONE_ALL_LOAD_LIBRARIES
+
          CreateForceAllLoadList( STANDALONE_ALL_LOAD_LIBRARIES FORCE_STANDALONE_ALL_LOAD_LIBRARIES)
 
          target_link_libraries( ${STANDALONE_NAME}
             ${FORCE_STANDALONE_ALL_LOAD_LIBRARIES}
-            ${STANDALONE_STARTUP}
          )
 
          set( INSTALL_LIBRARY_TARGETS
@@ -135,7 +153,5 @@ and everybody will be happy")
          )
       endif()
    endif()
-
-   include( StandaloneCAux OPTIONAL)
 
 endif()
