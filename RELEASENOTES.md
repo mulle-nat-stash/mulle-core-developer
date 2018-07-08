@@ -1,3 +1,7 @@
+### 0.7.1
+
+* fix travis
+
 ## 0.6.0
 
 * adapt to new mulle-sde-developer
