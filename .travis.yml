@@ -2,20 +2,32 @@ language: c
 
 # test mulle-sde-developer on linux and this on os x for variety
 
-os: osx
-sudo: required
-env:
-
-before_install:
-   - brew update
-   - brew install mulle-kybernetik/software/mulle-sde-developer
+os:
+   include:
+      - os: linux
+         dist: trusty
+         sudo: required
+         addons:
+            apt:
+               packages:
+                  - cmake
+                  - cmake-data
+         before_install:
+            - curl -sS "https://www.mulle-kybernetik.com/dists/debian-admin-pub.asc" | sudo apt-key add -
+            - echo "deb [arch=all] http://www.mulle-kybernetik.com `lsb_release -c -s` main" | sudo tee "/etc/apt/sources.list.d/mulle-kybernetik.com-main.list" > /dev/null
+            - sudo apt-get update
+            - sudo apt-get -y install mulle-sde mulle-test
+       - os: osx
+         before_install:
+            - brew update
+            - brew install mulle-kybernetik/software/mulle-sde-developer
 
 script:
    - MULLE_SDE_EXTENSION_PATH="${PWD}/src:/usr/share/mulle-sde:/usr/local/share/mulle-sde" mulle-sde init -d exe -m mulle-c/c-developer executable
    - cd exe
-   - mulle-sde -vvv craft
+   - mulle-sde -v craft
    - cd ..
    - MULLE_SDE_EXTENSION_PATH="${PWD}/src:/usr/share/mulle-sde:/usr/local/share/mulle-sde" mulle-sde init -d lib -m mulle-c/c-developer library
    - cd exe
-   - mulle-sde -vvv craft
+   - mulle-sde -v craft
    - cd ..
