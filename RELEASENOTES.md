@@ -1,3 +1,7 @@
+### 0.7.6
+
+* fix .travis lib build
+
 ### 0.7.5
 
 * fix travis for linux 4
