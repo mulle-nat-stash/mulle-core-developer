@@ -1,3 +1,7 @@
+### 0.7.4
+
+* fix travis for linux 3
+
 ### 0.7.3
 
 * fix travis for linux 2
