@@ -1,3 +1,8 @@
+## 0.8.0
+
+* adapt to use of delete instead of clobber
+
+
 ### 0.7.6
 
 * fix .travis lib build
