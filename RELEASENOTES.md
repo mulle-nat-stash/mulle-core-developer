@@ -1,3 +1,8 @@
+### 0.8.1
+
+* improve README, fix mingw bug in Standalone
+* adapt to use of delete instead of clobber
+
 ## 0.8.0
 
 * adapt to use of delete instead of clobber

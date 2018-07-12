@@ -1,4 +1,4 @@
-# 🧢 Enhanced cmake files for mulle-sde C development
+# 🧢 mulle-c developer kit for mulle-sde
 
 This is a [mulle-sde](/github.com/mulle-sde/mulle-sde) *meta extension*.
 It supplements **mulle-sde** with useful functionality for C development
@@ -47,15 +47,12 @@ sudo apt-get update
 
 ### Script
 
-There is an `install-all` script, that installs the pre-requisites and
-mulle-c-developer itself into `/usr`. Suitable for environments without
-supported package managers:
-
+There exists an `install-all` script to install the required commands and mulle-c-developer itself into /usr or some other place. This is suitable for environments without supported package managers:
 ```
 curl -L -O 'https://raw.githubusercontent.com/mulle-sde/mulle-sde/release/installer-all' && \
 chmod 755 installer-all && \
-sudo SDE_PROJECTS="mulle-c-developer;latest
-mulle-sde-developer;latest" ./installer-all /usr
+sudo OTHER_PROJECTS="mulle-c/mulle-c-developer;latest" \
+SDE_PROJECTS="mulle-sde-developer;latest" ./installer-all /usr
 ```
 
 

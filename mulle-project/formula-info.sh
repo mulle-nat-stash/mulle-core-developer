@@ -3,7 +3,7 @@
 # formula operations.
 #
 PROJECT="mulle-c-developer"      # your project/repository name
-DESC="🧢 mulle-sde extensions for mulle-c development"
+DESC="🧢 mulle-c developer kit for mulle-sde"
 
 # LANGUAGE="c"             # c,cpp, objc, bash ...
 # NAME="${PROJECT}"        # formula filename without .rb extension
