@@ -1,3 +1,7 @@
+### 0.8.2
+
+* improve travis
+
 ### 0.8.1
 
 * improve README, fix mingw bug in Standalone
