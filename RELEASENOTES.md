@@ -1,3 +1,7 @@
+### 0.8.3
+
+* improve travis.yml
+
 ### 0.8.2
 
 * improve travis
