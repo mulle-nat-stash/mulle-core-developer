@@ -44,16 +44,6 @@ echo "deb [arch=all] http://www.mulle-kybernetik.com `lsb_release -c -s` main" |
 sudo apt-get update
 ```
 
-
-### Script
-
-There exists an `install-all` script to install the required commands and mulle-c-developer itself into /usr or some other place. This is suitable for environments without supported package managers:
-```
-curl -L -O 'https://raw.githubusercontent.com/mulle-sde/mulle-sde/release/installer-all' && \
-chmod 755 installer-all && \
-sudo OTHER_PROJECTS="mulle-c/mulle-c-developer;latest" \
-SDE_PROJECTS="mulle-sde-developer;latest" ./installer-all /usr
-```
 ### Script
 
 mulle-sde provides an [installer-all](https://raw.githubusercontent.com/mulle-sde/mulle-sde/release/installer-all) script to install the required commands and mulle-sde-developer itself into `/usr` or some other place.
