@@ -1,3 +1,7 @@
+### 0.8.6
+
+* fix typo in StandaloneC
+
 ### 0.8.5
 
 * CMakeLists.txt CMakePackage.cmake Dockerfile LICENSE README.md RELEASENOTES.md VERSION dox installer mulle-c-developer.sublime-project mulle-c-developer.sublime-workspace mulle-project mulle-sde-c-developer.sublime-workspace src tmp.9jJfuGhk tmp.hb3I8Fnj improved README
