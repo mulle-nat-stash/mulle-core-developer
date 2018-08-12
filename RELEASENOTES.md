@@ -1,3 +1,7 @@
+### 0.8.7
+
+* fix misspelling, reduce installed dependency lines
+
 ### 0.8.6
 
 * fix typo in StandaloneC
