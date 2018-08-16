@@ -1,3 +1,7 @@
+### 0.8.9
+
+* reduce dependency list again (mistakenly increased by previous merges)
+
 ### 0.8.8
 
 * change `EXECUTABLE_LIBRARY_LIST` to support future optimization step
