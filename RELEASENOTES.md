@@ -1,3 +1,7 @@
+### 0.8.10
+
+* improved STARTUP and STANDALONE code
+
 ### 0.8.9
 
 * reduce dependency list again (mistakenly increased by previous merges)

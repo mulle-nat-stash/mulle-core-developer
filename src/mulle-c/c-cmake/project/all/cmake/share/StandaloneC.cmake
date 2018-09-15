@@ -21,7 +21,7 @@ if( STANDALONE)
    endif()
 
    if( NOT STANDALONE_NAME)
-      set( STANDALONE_NAME "<|PROJECT_NAME|>-standalone")
+      set( STANDALONE_NAME "${LIBRARY_NAME}-standalone")
    endif()
 
    if( NOT STANDALONE_DEFINITIONS)
