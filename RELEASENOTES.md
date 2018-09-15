@@ -1,3 +1,7 @@
+### 0.8.11
+
+* fix missing StartupC include
+
 ### 0.8.10
 
 * improved STARTUP and STANDALONE code
