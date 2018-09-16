@@ -1,3 +1,7 @@
+### 0.8.12
+
+* fix startup for plain C projects
+
 ### 0.8.11
 
 * fix missing StartupC include

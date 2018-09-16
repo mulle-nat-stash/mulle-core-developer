@@ -28,23 +28,23 @@ if( STARTUP_SOURCES)
       $<TARGET_FILE:${STARTUP_LIBRARY_NAME}>
    )
 else()
-   option( OPTION_LINK_STARTUP_LIBRARY "Add a startup library to the executable" ON)
-
    #
-   # This library contains ___get_or_create_mulle_objc_universe and
-   # the startup code to create the universe
+   # For mulle-objc, the startup library contains
+   # ___get_or_create_mulle_objc_universe and
+   # the startup code to create the universe.
+   # For C it's rarely if ever needed
    #
-   if( OPTION_LINK_STARTUP_LIBRARY)
+   if( STARTUP_LIBRARY_NAME)
       if( NOT STARTUP_LIBRARY)
-         if( NOT STARTUP_LIBRARY_NAME)
-            message( FATAL "STARTUP_LIBRARY_NAME is undefined (use Foundation if unsure)")
-         endif()
-
          find_library( STARTUP_LIBRARY NAMES ${CMAKE_STATIC_LIBRARY_PREFIX}${STARTUP_LIBRARY_NAME}${CMAKE_STATIC_LIBRARY_SUFFIX}
-                                             ${STARTUP_LIBRARY_NAME}
-         )
+                                          ${STARTUP_LIBRARY_NAME})
       endif()
+      if( NOT STARTUP_LIBRARY)
+         message( FATAL_ERROR "Startup library \"${STARTUP_LIBRARY_NAME}\" not found")
+      endif()
+   endif()
 
+   if( STARTUP_LIBRARY)
       set( DEPENDENCY_LIBRARIES
         ${DEPENDENCY_LIBRARIES}
         ${STARTUP_LIBRARY}
