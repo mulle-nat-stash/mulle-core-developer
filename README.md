@@ -1,7 +1,7 @@
 # 🧢 mulle-core developer kit for mulle-sde
 
 
-Use `mulle-sde init -m mulle-core/c-developer` to create projets
+Use `mulle-sde init -m mulle-core/c-developer` to create projects
 that tap into the functionality of the following libraries:
 
 
