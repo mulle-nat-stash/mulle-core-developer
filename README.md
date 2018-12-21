@@ -1,12 +1,9 @@
-# 🧢 mulle-c developer kit for mulle-sde
+# 🧢 mulle-core developer kit for mulle-sde
 
-This is a [mulle-sde](/github.com/mulle-sde/mulle-sde) *meta extension*.
-It supplements **mulle-sde** with useful functionality for C development
-using mulle-c libraries.
 
-It is also a convenient way to install mulle-sde. See
-[mulle-sde-developer](/github.com/mulle-sde/mulle-sde-developer) for more
-information about mulle-sde.
+Use `mulle-sde init -m mulle-core/c-developer` to create projets
+that tap into the functionality of the following libraries:
+
 
 Library                                                  | Description
 ---------------------------------------------------------|----------------------------
@@ -14,12 +11,32 @@ Library                                                  | Description
 [mulle-allocator](//github.com/mulle-c/mulle-allocator)  | Memory allocation and leak checking
 [mulle-buffer](//github.com/mulle-c/mulle-buffer)        | Memory storage and streams
 [mulle-c11](//github.com/mulle-c/mulle-c11)              | Compiler glue
-[mulle-concurrent](//github.com/mulle-c/mulle-concurrent)| Concurrent hashtable and array
-[mulle-container](//github.com/mulle-c/mulle-concurrent) | ObjC Foundation like data structures
-[mulle-sprintf](//github.com/mulle-c/mulle-sprintf )     | Extensible sprintf
-[mulle-thread](//github.com/mulle-c/mulle-thread)        | Threads and locks (C11/pthread)
+[mulle-concurrent](//github.com/mulle-concurrent/mulle-concurrent)| Concurrent hashtable and array
+[mulle-container](//github.com/mulle-concurrent/mulle-concurrent) | ObjC Foundation like data structures
+[mulle-sprintf](//github.com/mulle-core/mulle-sprintf )  | Extensible sprintf
+[mulle-testallocator](//github.com/mulle-core/mulle-testallocator)  | Leak and double free checking
+[mulle-sprintf](//github.com/mulle-core/mulle-sprintf)   | Extensible sprintf
+[mulle-thread](//github.com/mulle-concurrent/mulle-thread)        | Threads and locks (C11/pthread)
 [mulle-utf](//github.com/mulle-c/mulle-utf )             | Unicode string library
 [mulle-vararg](//github.com/mulle-c/mulle-vararg )       | An alternative vararg scheme
+
+
+This package will installs the [mulle-sde](/github.com/mulle-sde/mulle-sde) and [mulle-test](/github.com/mulle-sde/mulle-test) developer tools. 
+
+
+## Usage
+
+Check that the (meta) extensions are found with `mulle-sde extension show`.
+
+
+### Create an executable mulle-c project
+
+`mulle-sde init -d hello-exe -m mulle-core/c-developer executable`
+
+### Create a library mulle-c project
+
+`mulle-sde init -d hello-lib -m mulle-core/c-developer library`
+
 
 
 ## Install
@@ -28,8 +45,8 @@ Library                                                  | Description
 
 OS      | Command
 --------|------------------------------------
-macos   | `brew install mulle-kybernetik/software/mulle-c-developer`
-debian  | `sudo apt-get -y install mulle-c-developer` (but see below)
+macos   | `brew install mulle-kybernetik/software/mulle-core-developer`
+debian  | `sudo apt-get -y install mulle-core-developer` (but see below)
 ubuntu  | same as debian
 
 
@@ -65,25 +82,5 @@ curl -L -O 'https://raw.githubusercontent.com/mulle-sde/mulle-sde/release/instal
 chmod 755 installer-all && \
 OTHER_PROJECTS="mulle-c/mulle-c-developer;latest" \
 SDE_PROJECTS="mulle-sde-developer;latest" ./installer-all ~ no
-```
-
-# Usage
-
-Check that the (meta) extensions are found:
-
-```
-mulle-sde extension list
-```
-
-## Create an executable mulle-c project
-
-```
-mulle-sde init -d hello-exe -m mulle-c/c-developer executable
-```
-
-## Create a library mulle-c project
-
-```
-mulle-sde init -d hello-lib -m mulle-c/c-developer library
 ```
 
