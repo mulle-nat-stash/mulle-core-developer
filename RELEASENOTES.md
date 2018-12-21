@@ -1,3 +1,7 @@
+### 0.0.4
+
+* fix next broken dependency url
+
 ### 0.0.3
 
 * fix broken dependency url
