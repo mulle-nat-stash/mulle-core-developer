@@ -21,7 +21,7 @@ Library                                                  | Description
 [mulle-vararg](//github.com/mulle-c/mulle-vararg )       | An alternative vararg scheme
 
 
-This package will installs the [mulle-sde](/github.com/mulle-sde/mulle-sde) and [mulle-test](/github.com/mulle-sde/mulle-test) developer tools. 
+This package will install the [mulle-sde](/github.com/mulle-sde/mulle-sde) and [mulle-test](/github.com/mulle-sde/mulle-test) developer tools. 
 
 
 ## Usage
