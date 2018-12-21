@@ -1,3 +1,7 @@
+### 0.0.3
+
+* fix broken dependency url
+
 ### 0.0.2
 
 * fix travis
