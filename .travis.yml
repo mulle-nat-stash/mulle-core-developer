@@ -16,21 +16,21 @@ matrix:
          - "curl -sS \"https://www.mulle-kybernetik.com/dists/debian-admin-pub.asc\" | sudo apt-key add -"
          - echo "deb [arch=all] http://www.mulle-kybernetik.com `lsb_release -c -s` main" | sudo tee "/etc/apt/sources.list.d/mulle-kybernetik.com-main.list" > /dev/null
          - sudo apt-get update
-         - sudo apt-get install -y mulle-sde-developer
+         - sudo apt-get install -y mulle-c-developer
 
     - os: osx
       before_install:
         - "brew update"
-        - "brew install mulle-kybernetik/software/mulle-sde-developer"
+        - "brew install mulle-kybernetik/software/mulle-c-developer"
 
 
 script:
    - mulle-sde -DMULLE_SDE_EXTENSION_BASE_PATH="${PWD}/src" extension show
-   - mulle-sde -DMULLE_SDE_EXTENSION_BASE_PATH="${PWD}/src" init -d exe -m mulle-c/c-developer executable
+   - mulle-sde -DMULLE_SDE_EXTENSION_BASE_PATH="${PWD}/src" init -d exe -m mulle-core/c-developer executable
    - cd exe
    - mulle-sde craft
    - "./build/Release/exe"
    - cd ..
-   - mulle-sde -DMULLE_SDE_EXTENSION_BASE_PATH="${PWD}/src" init -d lib -m mulle-c/c-developer library
+   - mulle-sde -DMULLE_SDE_EXTENSION_BASE_PATH="${PWD}/src" init -d lib -m mulle-core/c-developer library
    - cd lib
    - mulle-sde craft
