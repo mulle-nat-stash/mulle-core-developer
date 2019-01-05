@@ -1,5 +1,6 @@
-# 🧢 mulle-core developer kit for mulle-sde
+# mulle-core-developer
 
+🧢  mulle-core developer kit for mulle-sde
 
 Use `mulle-sde init -m mulle-core/c-developer` to create projects
 that tap into the functionality of the following libraries:
@@ -7,21 +8,22 @@ that tap into the functionality of the following libraries:
 
 Library                                                  | Description
 ---------------------------------------------------------|----------------------------
-[mulle-aba](//github.com/mulle-c/mulle-aba)              | Memory reclamation for concurrent algorithms
+[mulle-aba](//github.com/mulle-concurrent/mulle-aba)     | Memory reclamation for concurrent algorithms
 [mulle-allocator](//github.com/mulle-c/mulle-allocator)  | Memory allocation and leak checking
 [mulle-buffer](//github.com/mulle-c/mulle-buffer)        | Memory storage and streams
 [mulle-c11](//github.com/mulle-c/mulle-c11)              | Compiler glue
 [mulle-concurrent](//github.com/mulle-concurrent/mulle-concurrent)| Concurrent hashtable and array
-[mulle-container](//github.com/mulle-concurrent/mulle-concurrent) | ObjC Foundation like data structures
+[mulle-container](//github.com/mulle-c/mulle-container)  | ObjC Foundation like data structures
 [mulle-sprintf](//github.com/mulle-core/mulle-sprintf )  | Extensible sprintf
 [mulle-testallocator](//github.com/mulle-core/mulle-testallocator)  | Leak and double free checking
 [mulle-sprintf](//github.com/mulle-core/mulle-sprintf)   | Extensible sprintf
-[mulle-thread](//github.com/mulle-concurrent/mulle-thread)        | Threads and locks (C11/pthread)
+[mulle-thread](//github.com/mulle-concurrent/mulle-thread) | Threads and locks (C11/pthread)
 [mulle-utf](//github.com/mulle-c/mulle-utf )             | Unicode string library
 [mulle-vararg](//github.com/mulle-c/mulle-vararg )       | An alternative vararg scheme
 
 
-This package will install the [mulle-sde](/github.com/mulle-sde/mulle-sde) and [mulle-test](/github.com/mulle-sde/mulle-test) developer tools. 
+This package will install the [mulle-sde](/github.com/mulle-sde/mulle-sde) and
+[mulle-test](/github.com/mulle-sde/mulle-test) developer tools.
 
 
 ## Usage
