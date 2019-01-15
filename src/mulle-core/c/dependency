@@ -1,2 +1,2 @@
---marks 'no-all-load' https://github.com/mulle-c/mulle-testallocator/archive/latest.tar.gz
---marks 'no-all-load' https://github.com/mulle-c/mulle-sprintf/archive/latest.tar.gz
+--marks 'no-all-load' https://github.com/mulle-core/mulle-testallocator/archive/latest.tar.gz
+--marks 'no-all-load' https://github.com/mulle-core/mulle-sprintf/archive/latest.tar.gz
