@@ -1,3 +1,7 @@
+### 0.0.9
+
+* small fix
+
 ### 0.0.8
 
 * renamed dependency to dependencies for newest mulle-sde

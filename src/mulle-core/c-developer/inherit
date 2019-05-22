@@ -1,3 +1,4 @@
 mulle-core/c;runtime
+mulle-c/c-demo;runtime
 mulle-c/c-cmake;buildtool
 mulle-c/travis;extra
