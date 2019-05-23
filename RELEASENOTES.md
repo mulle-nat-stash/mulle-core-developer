@@ -1,3 +1,7 @@
+### 0.0.10
+
+* fix travis
+
 ### 0.0.9
 
 * small fix
